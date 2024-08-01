@@ -1,0 +1,109 @@
+/* Reset CSS behavior */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.max__width {
+    max-width: 1080px;
+    margin: auto;
+}
+
+#header {
+    border: 1px solid black;
+    height: 70px;
+}
+
+.header__container {
+    /* background-color: dodgerblue; */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header__container > .header__links a{
+    margin: 0 10px;
+}
+
+/* Style on the main section */
+#main {
+    border: 1px solid black;
+    height: calc(100vh - 70px);
+}
+
+.main__container {
+    /* background-color: dodgerblue; */
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    padding: 10px;
+}
+
+.main__container > .main__right > .main__logo
+{
+    width: 400px;
+}
+
+.main__container > .main__right > .main__logo > img{
+    border-radius: 15px;
+}
+
+.main__left p{
+    /* background-color: dodgerblue; */
+    margin: 10px 0;
+}
+
+/* Styling for BTN */
+.mouse-cursor-gradient-tracking {
+    position: relative; /* Set the position relative to position the pseudo-element */
+    background: 
+  #7983ff; /* Background color */
+    padding: 0.5rem 1rem; /* Padding for the button */
+    font-size: 1.2rem; /* Font size */
+    border: none; /* Remove border */
+    color: 
+  white; /* Text color */
+    cursor: pointer; /* Set cursor style to pointer */
+    outline: none; /* Remove default outline */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 5px;
+  }
+  
+  .mouse-cursor-gradient-tracking span {
+    position: relative; /* Set the position relative */
+  }
+  
+  .mouse-cursor-gradient-tracking:before {
+    --size: 0; /* Custom property for size */
+    content: ''; /* Empty content */
+    position: absolute; /* Set the position absolute */
+    left: var(--x); /* Position from left based on mouse movement */
+    top: var(--y); /* Position from top based on mouse movement */
+    width: var(--size); /* Width of the pseudo-element */
+    height: var(--size); /* Height of the pseudo-element */
+    background: radial-gradient(circle closest-side, red, transparent); /* Gradient background */
+    transform: translate(-50%, -50%); /* Translate the pseudo-element */
+    transition: width 0.2s ease, height 0.2s ease; /* Transition effect for width and height */
+  }
+  
+  .mouse-cursor-gradient-tracking:hover:before {
+    --size: 200px; /* Size of the pseudo-element on hover */
+  }

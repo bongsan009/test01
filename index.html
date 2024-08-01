@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My website</title>
+    <!-- LINK CSS File -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="header__container max__width">
+        <h1 class="head__logo">San</h1>
+
+        <nav class="header__links">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./project.html">Projects</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="main__container max__width">
+        <div class="main__left">
+          <h2>Welcome To My Portfolio Website...</h2>
+          <p>This is the great resource that you are looking for.</p>
+          <button class="mouse-cursor-gradient-tracking">
+            <!-- Button element with class for styling -->
+            <span>Hover me</span>
+          </button>
+        </div>
+        <div class="main__right">
+          <div class="main__logo">
+            <img src="./assets/images/profile3.jpg" alt="profile" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let btn = document.querySelector(".mouse-cursor-gradient-tracking");
+      btn.addEventListener("mousemove", (e) => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        btn.style.setProperty("--x", x + "px");
+        btn.style.setProperty("--y", y + "px");
+      });
+    </script>
+  </body>
+</html>
